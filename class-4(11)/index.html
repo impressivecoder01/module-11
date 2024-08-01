@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transform element using rotate scale translate</title>
+    <style>
+        .container, .inner{
+            width: 200px;
+            height: 200px;
+        }
+        .container{
+            border: 2px rebeccapurple solid;
+            background-color: bisque;
+        }
+        .inner{
+            border: 2px solid red;
+            background-color: gray;
+            /* display: none; */
+            /* transform: scale(.9, .25 ); */
+            /* transform: rotate(90deg); */
+            transform: rotate(-90deg);
+        }
+
+    </style>
 </head>
 <body>
-    
+    <h2>Explore Transform and translate</h2>
+    <div class="container">
+        <div class="inner">inner 1</div>
+    </div>
+    <div class="container">
+        <div class="inner">inner 2</div>
+    </div>
+    <div class="container">
+        <div class="inner">inner 3</div>
+    </div>
 </body>
 </html>
