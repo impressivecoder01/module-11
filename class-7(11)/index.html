@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Optional) css animation and bounce effect with balls</title>
+    <style>
+        /* @keyframes ping {
+            form{
+                left: 0px;
+            }
+            to{
+                left:400px ;
+                background-color: black;
+            }
+        } */
+         @keyframes ping {
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 200px; 
+                left: 250px;
+            }
+            50%{
+                top: 0px;
+                left: 400px;
+            }
+            100%{
+                top: 200px;
+               
+            }
+            
+         }
+        .stage{
+            width: 500px;
+            height: 300px;
+            border: 1px solid saddlebrown;
+            background-color: bisque;
+    }
+    .ball{
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+        border-radius: 50%;
+        position: relative;
+        animation: ping 2s ease-in-out 1s infinite alternate ;
+    }
+    </style>
+</head>
+<body>
+    <h2>Explore animation</h2>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
