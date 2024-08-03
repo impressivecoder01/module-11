@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(advanced) css custom property and var, calc</title>
+    <style>
+        :root{
+            --primary-color:gray;
+            --secondary-color:blue;
+            --font-size:12px;
+        }
+        h1{
+            color: var(--primary-color);
+        }
+        h5{
+            background-color: brown;
+        }
+        .box{
+            border: 2px solid slateblue;
+            width: calc(100% - 200px);
+        }
+        .box p{
+            color: var(--secondary-color);
+            font-size: var(--font-size);
+        }
+        .container{
+            display: grid;
+            gap: 20px;
+            /* grid-template-columns: 200px calc(100% - 200px - 20px); */
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .sidebar{
+            background-color: lightgray;
+            width: 150px;
+        }
+        .content{
+            background-color: orchid;
+            width: calc(100% - 150px -20px);
+        }
+    </style>
+</head>
+<body>
+    <h1>My custom properties </h1>
+    <h5>Also commonly known as CSS variables</h5>
+    <div class="box">
+        <h3>I am doing something
+        </h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque sint perspiciatis cupiditate optio et quisquam ipsum, facilis ullam. Debitis, maxime.</p>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            Sidebar
+        </div>
+        <div class="content">Main Content</div>
+    </div>
+</body>
+</html>
